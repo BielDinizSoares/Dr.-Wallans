@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Box, Container, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from '../assets/logo.png';
@@ -10,6 +11,22 @@ const navItems = [
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Contato', href: '#contato' },
 ];
+
+const MotionButton = motion.create(Button);
+
+const pulseAnimation = {
+  scale: [1, 1.05, 1],
+  boxShadow: [
+    '0 4px 14px rgba(196,154,92,0.3)',
+    '0 4px 20px rgba(196,154,92,0.6)',
+    '0 4px 14px rgba(196,154,92,0.3)'
+  ],
+  transition: {
+    duration: 2.2,
+    repeat: Infinity,
+    ease: "easeInOut"
+  }
+};
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,13 +41,12 @@ const Header = () => {
   return (
     <>
       <AppBar
-        position="fixed"
+        position="sticky"
         elevation={scrolled ? 4 : 0}
         sx={{
           background: scrolled ? 'rgba(16,46,74,0.96)' : 'rgba(16,46,74,0.86)',
           backdropFilter: 'blur(10px)',
-          transition: 'all 0.3s ease',
-          py: scrolled ? 0 : 1,
+          transition: 'background 0.3s ease, box-shadow 0.3s ease',
         }}
       >
         <Container maxWidth="lg">
@@ -44,9 +60,8 @@ const Header = () => {
                 src={logo}
                 alt="Dr. Wallanns Resende"
                 style={{
-                  height: scrolled ? 65 : 100,
+                  height: 80,
                   filter: 'brightness(0) invert(1)',
-                  transition: 'height 0.3s ease',
                 }}
               />
             </Box>
@@ -70,27 +85,33 @@ const Header = () => {
                   {item.label}
                 </Button>
               ))}
-              <Button
+              <MotionButton
                 variant="contained"
                 href="https://wa.me/5531987808114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
                 target="_blank"
                 rel="noopener"
                 size="small"
+                animate={pulseAnimation}
                 sx={{
                   ml: 1,
-                  py: 1,
+                  py: 1.2,
                   px: 3,
-                  bgcolor: '#1E63D8',
-                  color: '#FFFFFF',
-                  fontWeight: 700,
+                  background: '#C49A5C !important',
+                  color: '#FFFFFF !important',
+                  fontWeight: 800,
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 14px rgba(196,154,92,0.3)',
+                  transition: 'all 0.3s ease',
                   '&:hover': {
-                    bgcolor: '#C49A5C',
-                    color: '#0F2B46',
+                    background: '#B38950 !important',
+                    color: '#FFFFFF !important',
+                    boxShadow: '0 6px 20px rgba(196,154,92,0.4)',
+                    transform: 'translateY(-1px)',
                   },
                 }}
               >
                 Agendar Consulta
-              </Button>
+              </MotionButton>
             </Box>
 
             {/* Mobile menu button */}
@@ -138,24 +159,27 @@ const Header = () => {
             </ListItem>
           ))}
           <ListItem sx={{ mt: 2 }}>
-            <Button
+            <MotionButton
               variant="contained"
               fullWidth
               href="https://wa.me/5531987808114?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
               target="_blank"
               rel="noopener"
+              animate={pulseAnimation}
               sx={{
-                bgcolor: '#1E63D8',
-                color: '#FFFFFF',
-                fontWeight: 700,
+                background: '#C49A5C !important',
+                color: '#FFFFFF !important',
+                fontWeight: 800,
+                py: 1.5,
+                borderRadius: '8px',
                 '&:hover': {
-                  bgcolor: '#C49A5C',
-                  color: '#0F2B46',
+                  background: '#B38950 !important',
+                  color: '#FFFFFF !important',
                 },
               }}
             >
               Agendar Consulta
-            </Button>
+            </MotionButton>
           </ListItem>
         </List>
       </Drawer>

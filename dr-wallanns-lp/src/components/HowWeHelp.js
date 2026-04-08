@@ -86,14 +86,14 @@ const HowWeHelp = () => {
           </Typography>
           <Typography
             variant="body1"
-            textAlign="center"
             sx={{
               color: 'text.secondary',
-              maxWidth: 700,
+              maxWidth: 900,
               mx: 'auto',
               mb: 6,
               fontSize: { xs: '0.95rem', md: '1.1rem' },
               lineHeight: 1.8,
+              textAlign: { xs: 'center', md: 'justify' },
             }}
           >
             Cuidar da sa{'\u00FA'}de n{'\u00E3'}o precisa ser complicado. O Dr. Wallanns atua de forma pr{'\u00F3'}xima
