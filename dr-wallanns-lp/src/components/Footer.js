@@ -145,17 +145,17 @@ const Footer = () => {
                   </Typography>
                 </Box>
               </Box>
-              <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
-                <LocationOnIcon sx={{ fontSize: 20, color: '#2A8BAF', mt: 0.3 }} />
-                <Box>
-                  <Typography variant="body2" sx={{ color: '#fff', fontWeight: 500 }}>
-                    {'Cl\u00EDnicas Almane e Nefes'}
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
-                    {'Consult\u00F3rios'}
-                  </Typography>
+                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
+                  <LocationOnIcon sx={{ fontSize: 20, color: '#2A8BAF', mt: 0.3 }} />
+                  <Box>
+                    <Typography variant="body2" sx={{ color: '#fff', fontWeight: 500 }}>
+                      {'Cl\u00EDnicas Nefes e Almane'}
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
+                      {'Consult\u00F3rios'}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
             </Box>
           </Grid>
 
@@ -226,21 +226,21 @@ const Footer = () => {
           }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.1!2d-43.9355!3d-19.9194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699e5d53e45f7%3A0xd1f4f1f0b9bcc2f!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1620310948982!5m2!1spt-BR!2sbr"
+            src="https://maps.google.com/maps?q=Cl%C3%ADnica+NEFES+SA%C3%9ADE&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="250"
             style={{ border: 0, display: 'block' }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Google Maps - Belo Horizonte"
+            title="Google Maps - Cl\u00EDnica NEFES SA\u00DADE"
           />
         </Box>
 
         {/* Copyright */}
         <Box sx={{ mt: 4, pt: 3, borderTop: '1px solid rgba(255,255,255,0.08)', textAlign: 'center' }}>
           <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.4)' }}>
-            {'\u00A9 2025 Dr. Wallanns Resende. Todos os direitos reservados.'}
+            {'\u00A9 2026 Dr. Wallanns Resende. Todos os direitos reservados.'}
           </Typography>
         </Box>
       </Container>
