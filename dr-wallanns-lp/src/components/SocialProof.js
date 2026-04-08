@@ -4,11 +4,10 @@ import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import StarIcon from '@mui/icons-material/Star';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import GoogleIcon from '@mui/icons-material/Google';
 import Button from '@mui/material/Button';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 

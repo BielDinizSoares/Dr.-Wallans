@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Chip } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import autoridade from '../assets/autoridade.webp';
