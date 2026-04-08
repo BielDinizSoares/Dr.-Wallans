@@ -89,7 +89,7 @@ const Authority = () => {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.7 }}
             >
-              <Chip
+              {/* <Chip
                 label="O Especialista"
                 sx={{
                   mb: 2,
@@ -98,7 +98,7 @@ const Authority = () => {
                   fontWeight: 600,
                   fontSize: '0.8rem',
                 }}
-              />
+              /> */}
               <Typography
                 variant="h2"
                 sx={{
